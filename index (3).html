@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Background Remover</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Pro Background Remover</h1>
+        <p>AI-Powered Background Removal in Seconds</p>
+    </div>
+
+    <div class="container">
+        <div class="upload-section">
+            <div class="upload-box" id="dropZone">
+                <i class="fas fa-cloud-upload-alt fa-3x"></i>
+                <h3>Drag & Drop Image Here</h3>
+                <p>or click to upload</p>
+                <input type="file" id="fileInput" hidden accept="image/*">
+            </div>
+            <img id="preview" alt="Preview">
+            <div class="loading">
+                <div class="loader"></div>
+                <p>Processing Image...</p>
+            </div>
+        </div>
+
+        <div class="tools-panel">
+            <div class="advanced-options">
+                <h3>Advanced Tools</h3>
+                <div class="slider-container">
+                    <label>Brightness: <input type="range" id="brightness" min="0" max="200" value="100"></label>
+                    <label>Contrast: <input type="range" id="contrast" min="0" max="200" value="100"></label>
+                    <label>Saturation: <input type="range" id="saturation" min="0" max="200" value="100"></label>
+                </div>
+            </div>
+
+            <button class="action-btn" id="removeBgBtn">Remove Background</button>
+
+            <div class="download-options">
+                <div class="format-options">
+                    <button class="format-btn active" data-format="png">PNG</button>
+                    <button class="format-btn" data-format="jpg">JPG</button>
+                </div>
+                <button class="action-btn" id="downloadBtn">
+                    <i class="fas fa-download"></i> Download Image
+                </button>
+                <button class="action-btn" id="newImageBtn">
+                    <i class="fas fa-plus"></i> New Image
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
